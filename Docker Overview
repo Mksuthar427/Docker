@@ -1,0 +1,20 @@
+Docker components
+1.DockerFile
+2.DockerImage
+3.Docker Container
+4.Docker Registry
+
+Installation Of Docker
+
+URL : https://docs.docker.com/engine/install/
+
+Docker---->Image---->Container1
+                ---->Container2
+                ---->Container3
+
+https://prnt.sc/Mk5KIsw0100F
+
+
+
+
+
