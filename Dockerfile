@@ -1,11 +1,20 @@
-FROM python
+# Use an official Node.js runtime as a parent image
+FROM node:18
 
+# Set the working directory in the container
 WORKDIR /myapp
 
-COPY ./sql_demo.py .
+# Copy package.json and package-lock.json (or yarn.lock)
+COPY package*.json ./
 
-RUN pip install pymysql
-RUN pip install cryptography
+# Install dependencies
+RUN npm install
 
-CMD ["python", "sql_demo.py"]
+# Copy the rest of the application code
+COPY . .
 
+# Expose the port your app runs on (optional, but recommended)
+EXPOSE 3000
+
+# Command to run the application
+CMD ["node", "app.js"]
